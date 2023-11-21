@@ -1,0 +1,39 @@
+/*
+Q1.WAP to check compiletime polymorphism.Use runtime objects.Refer notebook.
+*/
+
+#include<iostream>
+using namespace std;
+
+class parent
+{
+	public:
+		
+		void show()
+		{
+			cout<<"in parent show()"<<endl;
+		}
+};
+
+class child : public parent
+{
+	public:
+		
+		void show()
+		{
+			cout<<"in child show()"<<endl;
+		}
+};
+
+int main()
+{
+	parent * p;
+	
+	p = new parent();
+	p->show();
+	
+	p = new child();
+	p->show();
+	
+	return 0; 
+}
